@@ -1,0 +1,25 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    width: 300px;
+  }
+  
+  .login-button-container,
+  .signup-link-container {
+    margin-top: 15px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .middle-snackbar {
+    top: 50%;
+    transform: translateY(-50%);
+  }

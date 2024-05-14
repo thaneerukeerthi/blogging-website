@@ -1,0 +1,49 @@
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-item {
+    margin-bottom: 20px;
+  }
+  
+  .edit-form {
+    margin-top: 20px;
+  }
+  
+  .edit-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .edit-buttons {
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .button-space {
+    width: 10px;
+  }
+  
+  .mat-raised-button {
+    min-width: 120px; 
+  }
+  
+  .button-group {
+    display: flex;
+  }
+  
+  .edit-button {
+    margin-right: 10px;
+  }

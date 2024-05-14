@@ -1,0 +1,30 @@
+<div class="home-container">
+    <h2 class="home-header">Home</h2>
+  
+    <div class="home-buttons">
+      <button mat-raised-button color="primary" class="home-button" (click)="goToMyBlogs()">My Blogs</button>
+      <button mat-raised-button color="primary" class="home-button" (click)="goToProfile()">Profile</button>
+      <button mat-raised-button color="primary" class="home-button" (click)="logout()">Logout</button>
+    </div>
+  
+    <div *ngIf="isLoading" class="loader"></div>
+
+    <div [hidden]="isLoading">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Define your table columns here -->
+          <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.title }}</mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="content">
+            <mat-header-cell *matHeaderCellDef>Content</mat-header-cell>
+            <mat-cell *matCellDef="let blog">{{ blog.content }}</mat-cell>
+          </ng-container>
+      
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" showFirstLastButtons></mat-paginator>
+  </div>
+  

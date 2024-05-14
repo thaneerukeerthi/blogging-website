@@ -1,0 +1,29 @@
+<div class="blog-form-container">
+    <h2 class="blog-form-header">Blog Form</h2>
+  
+    <form (ngSubmit)="saveBlog()">
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" [(ngModel)]="title" name="title" required>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+        <mat-form-field appearance="fill">
+          <mat-label>Content</mat-label>
+          <textarea matInput [(ngModel)]="content" name="content" required class="mat-input-element"></textarea>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+        <mat-checkbox [(ngModel)]="status" name="status" class="mat-checkbox-label">Active</mat-checkbox>
+      </div>
+      
+      <div class="form-group">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-raised-button color="primary" type="button" (click)="cancelBlog()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

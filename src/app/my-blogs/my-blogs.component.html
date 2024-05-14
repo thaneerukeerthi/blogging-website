@@ -1,0 +1,41 @@
+
+<div class="blog-container">
+    <h2 class="blog-header">My Blogs</h2>
+    
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="back()">Back</button>
+      <div class="button-space"></div>
+      <button mat-raised-button color="primary" (click)="goToBlogForm()">Add Blog</button>
+      <div class="button-space"></div>
+      <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+    </div>
+  
+    <div class="blog-item" *ngFor="let blog of myBlogs">
+      <div *ngIf="!blog.editMode">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.content }}</p>
+        <div class="button-group">
+          <button mat-raised-button color="accent" class="edit-button" (click)="editBlog(blog)">Edit</button>
+          <button mat-raised-button color="warn" class="delete-button" (click)="deleteBlog(blog)">Delete</button>
+        </div>
+      </div>
+      
+      <div *ngIf="blog.editMode" class="edit-form">
+        <mat-form-field appearance="fill" class="edit-field">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" [(ngModel)]="blog.updatedTitle">
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="edit-field">
+          <mat-label>Content</mat-label>
+          <textarea matInput [(ngModel)]="blog.updatedContent"></textarea>
+        </mat-form-field>
+        <div class="edit-buttons">
+          <button mat-raised-button color="primary" (click)="saveBlogChanges(blog)">Save</button>
+          <button mat-raised-button color="warn" (click)="cancelEdit(blog)">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

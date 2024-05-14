@@ -1,0 +1,55 @@
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .home-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .home-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .home-button {
+    margin-right: 10px;
+  }
+  
+  .blog-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .blog-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+  }
+  
+  .blog-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .blog-content {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  
+.loader {
+    border: 6px solid #f3f3f3; 
+    border-top: 6px solid #3498db; 
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
